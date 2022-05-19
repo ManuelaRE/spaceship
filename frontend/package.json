@@ -1,0 +1,110 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^16.11.36",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "formik": "^2.2.9",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-uid": "^2.3.2",
+    "typescript": "^4.6.4",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --parser typescript --list-different \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"; stylelint \"src/**/*.{ts,tsx}\"",
+    "reformat": "eslint --fix \"src/**/*.{ts,tsx}\"; prettier --parser typescript --write \"src/**/*.{ts,tsx}\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript",
+      "prettier"
+    ],
+    "rules": {
+      "import/newline-after-import": "error",
+      "import/no-unresolved": "off",
+      "import/order": [
+        "error",
+        {
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          },
+          "groups": [
+            "builtin",
+            "external",
+            "internal"
+          ],
+          "pathGroups": [
+            {
+              "pattern": "src/**",
+              "group": "external",
+              "position": "after"
+            }
+          ],
+          "pathGroupsExcludedImportTypes": [
+            "builtin"
+          ],
+          "newlines-between": "always"
+        }
+      ],
+      "no-console": "warn",
+      "react-hooks/exhaustive-deps": "error"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-i18next": "^6.0.0-3",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.8.2",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^5.0.0"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard"
+    ],
+    "plugins": [
+      "stylelint-order"
+    ],
+    "rules": {
+      "order/properties-alphabetical-order": true,
+      "declaration-block-trailing-semicolon": null,
+      "declaration-colon-newline-after": null,
+      "declaration-empty-line-before": null
+    }
+  }
+}
